@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+
+
+/******TOC******/
+/***************/
+/***Fonts*******/
+/*"Pacifico", cursive;- Header*/
+/*"Francois One", sans-serif;-Content*/
+/*"Libre Baskerville", serif;-Subheads*/
+/****Colors****/
+/*#f4fafd;-Light/White*/
+/*#01203d;-Dark Blue*/
+/*#82f5c6;-Mid Blue*/
+/*#7B3010;-Brown*/
+/*#FFEE33;-Yello*/
+/*#FFD2CC;-Pink*/
+
+
+
+/*Global Styles*/
+
+body{
+	background: #f3f8fe url(../imgs/jacksurfing.png) no-repeat fixed center; 
+	background-size: 100%;
+	font:1.75em/2em "Francois One", sans-serif;
+	color:#f4fafd;
+	text-shadow: 1px 1px 4px #01203d;
+}
+.container-fluid {
+	width: 100% !important;
+	
+	max-width:1200px;
+	margin:auto;
+	background: rgba(2,43,65,.45);
+	}
+
+img{
+	height:100%;
+	width:100%;
+	max-width:600px;
+	border-radius:15px;
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,.75);
+ 
+	}
+li{
+	list-style:none;}
+
+#open{
+	display:none;}	
+.nav .menu{
+	cursor:pointer;}	
+	
+/************Tabs*********************/
+
+div #tabs-container{
+	margin-left:1.25%;
+	padding-right:0;
+	margin-bottom:0;
+	padding-bottom:0;
+	}	
+.ready {
+	position: relative;
+	margin-bottom: .2em;
+}
+
+/*header size*/
+#tab-group.ready h2 {
+	font-weight: normal;
+	font-size: .70em;
+	text-transform: uppercase;
+	padding: 4px 0px 0px 5px;
+	margin-right:1%;
+	margin-bottom:0;
+	line-height:4.25em;
+	
+}
+
+/*tab header position/BG color*/
+.ready .tab-header {
+	
+	background:rgba(255,210,204,.25);
+	
+	border: none;
+	border-radius: 4px 4px 0 0;
+	z-index: 0;
+	
+	cursor: pointer;
+}
+
+
+.ready .tab-header.active {
+	background: rgba(255,238,51,.6);
+	border-bottom-color: white;
+}
+/*content bg color and zoom*/
+
+.ready .tab-content {
+	position: relative;
+	top: -5px;;
+	margin: 0;
+	padding-top: 0em;
+	
+	border: none;
+	z-index: 1;
+
+}
+
+.ready .tab-content:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*end tab align*/
+
+/*hide content*/
+.ready .tab-content {
+	display: none;
+}
+
+/*show content*/
+.ready .tab-content.active {
+	display: block;
+	
+}
+/*******************End Tabs*******************/
+	
+/*Links*/
+body a{
+	text-decoration:none;
+	color:#f4fafd;}
+footer a:visited{
+	color:#FFEE33;
+	
+	}
+body a:active{
+	color:#ffd2cc;}		
+.nav #open a{
+	text-decoration:none;}
+.nav p:hover{
+	transform:scale(1.5)!important;
+	z-index:1000;}
+.nav a:hover{
+	background:transparent !important;
+	text-decoration:none;}
+	
+footer li:hover, footer img:hover, section img:hover{
+	text-shadow:#f4fafd;
+	text-decoration:none;
+	transform:scale(1.5);}	
+footer a:hover, main a:hover{
+	color:#f4fafd;
+	text-decoration:none;
+	}					
+footer p a:hover{
+	color:#82f5c6;}	
+/*Albums Table*/		
+table img {
+	max-width:100px;
+	max-height:100px;
+}
+table{
+	margin-left:0%;}
+td{
+	padding-top:2em;}	
+	
+/*Header*/
+header h1{
+	font:5.8em/3em "Pacifico", cursive;
+	text-align:center;
+	color:#f4fafd;
+	}
+header .nav {
+	width:95%;
+	margin:auto;}		
+
+.nav li{
+	}
+.nav p{
+	background:url(../images/board.png) no-repeat 0;  
+	background-size:100%;	
+	height:auto;
+	width:auto;
+	font:2em/3em "Pacifico", cursive;
+	color:#f4fafd;
+	text-shadow: 2px 2px 8px #01203d;
+	text-align:center;}
+header{
+	background:url(../imgs/live.png) no-repeat center;
+	background-size:100%;
+	width:100%;
+	border-radius:15px;
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,.75);
+	height:453px;
+	margin:auto;}	
+/*Body Text*/
+h2{
+	font:2.5em/3em "Libre Baskerville", serif;
+	}
+/*Footer*/
+footer{
+	font-size:.8em;}
+footer ul, main ul
+	{
+	list-style:none;
+	display:inline-block;
+	padding-left:0;
+		}
+footer a img{
+	max-height:50px;
+	max-width:50px;
+	}	
+footer{
+	margin-top:50px;
+	}	
+footer .disclaimer{
+	text-align:right;}		
+
+/*Table Spacing*/
+section table{
+margin:auto;
+width:80%;}
+
+	
+section tr td{
+	width:auto;
+	margin-top:5%;
+	
+	}
+
+/*Discography Spacing*/
+.albums {
+	margin: 5% auto;}	
+/*Sources Spacing*/
+main .sources {
+	margin:2% 5%;}
+main ul{
+	
+	margin:2% 5%;
+	}
+	
+
+/*Responsive tweeks*/
+
+@media (max-width:954px) {
+	/*Fix Header Pushing things down because of line height*/
+	header h1{
+		line-height:1.25em;}
+	/*Fix whitespace on right side of mobile devices*/
+	body .container-fluid{
+		width:100% !important;
+		overflow-x:hidden;}	
+	/*fix overlap on nav and tabs at med size*/
+	#spacer.col-xs-12{
+		margin-bottom:5%;}	
+}
+@media (max-width:570px){
+	.nav p{
+		line-height:2.1em;}
+	#tab-group.ready h2{
+		margin:0;}	}
+@media (max-width:768px){
+	/*Fix Header overflow cutoff*/
+	header h1{
+		font-size:4.8em !important;
+		margin:15% auto 5% -5% !important;
+		}
+		/*Fix whitespace on right side of mobile devices*/
+	body .container-fluid{
+		width:100% !important;
+		overflow-x:hidden;}
+	/*Fix nav img spacing*/
+	.nav {
+		margin:0px auto;}	
+		
+	
+	/*Fix thumbnails becoming too small on mobile*/
+	section td img{
+		width:100% !important;
+		height:100% !important;}
+	/*Fix text from overlapping thumbnails on mobile*/
+	section table{
+		width:100% !important;
+		}
+	/*Box shadow goes around entire element instead of just the image on mobile*/
+	header{
+		border-radius:none !important;
+		box-shadow: none !important;}
+	/*Fix Menu items on mobile*/
+	
+	.nav .drop{
+		display:none;}			
+	.nav #open{
+		display:block;
+		padding-top:10px;}
+	.nav .visible, .nav #open {
+		
+		width:60%;
+		height:25%;
+		margin:auto;
+		}
+	
+	
+	header .menu {
+		position:relative;
+		z-index:1000 !important;
+		
+		background-color:rgba(244,250,253,.90);
+		border-radius:5px;
+		}	
+	.nav>li>a{
+		padding:0;}		
+	
+			
+	#tab-group.ready h2{
+		margin:0;
+		}
+	#tab-container:nth-child(1), #tab-container:nth-child(2){
+		margin-top:10% !important;}			
+	}
+		
